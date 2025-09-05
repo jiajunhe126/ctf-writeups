@@ -26,11 +26,13 @@ Step 2: Run hashcat with the rockyou.txt wordlist (commonly used for weak passwo
 hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 
--m 0 specifies MD5
+'-m 0' specifies MD5
 
--a 0 specifies dictionary attack
+'-a 0' specifies dictionary attack
 
-rockyou.txt refer to a weak password list
+rockyou.txt refers to a weak password list
 
+Hash successfully cracked by hashcat, the password is 'password123'
+![Image2](MD5 crack)
 
 
