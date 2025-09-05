@@ -9,7 +9,7 @@ Challenge points: Easy
 
 ![Image1](Description)
 
-Q1: Crack MD5 hash
+## Q1: Crack MD5 hash
 
 According to the hash in first question provided which is '482c811da5d5b4bc6d497ffa98491e38' ，this hash matches the characteristics of an MD5 hash (32-character hexadecimal string). 
 
@@ -37,7 +37,7 @@ rockyou.txt refers to a weak password list, this file stores in '/usr/share/word
 
 Hash successfully cracked by hashcat, the password is 'password123'
 
-Q2: Crack SHA-1 hash
+## Q2: Crack SHA-1 hash
 
 The second hash is 'b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3', if we not sure the type of hash, we could use **hashid** tool to identify it:
 
@@ -67,7 +67,7 @@ In this command, '-m 100' specifies SHA-1 hash crack in hashcat
 
 We cracked the SHA-1 hash and the password is 'letmein'
 
-Q3:  Crack SHA-256 hash
+## Q3:  Crack SHA-256 hash
 
 Use the same step as Q2 to crack SHA-256 hash. Don't forget to adjust the '-m' parameter in hashcat to the correct mode number.
 
@@ -103,5 +103,6 @@ After correctly cracking these three hashes, finally get the flag.
 
 ![Image7](solution)
 
+**Final Flag:** `picoCTF{UseStr0nG_h@shEs_f0r_Passw0rds!_eb2f8459}`
 
 
