@@ -8,9 +8,9 @@ Challenge category: Cryptography
 Challenge points: Easy
 ![Image1](Description)
 
-Q1: Crack MD5 hash code
+Q1: Crack MD5 hash
 
-According to the string in first question provided which is '482c811da5d5b4bc6d497ffa98491e38' ，this hash matches the characteristics of an MD5 hash (32-character hexadecimal string). 
+According to the hash in first question provided which is '482c811da5d5b4bc6d497ffa98491e38' ，this hash matches the characteristics of an MD5 hash (32-character hexadecimal string). 
 
 In order to crack this hash, the tool **hashcat** is commonly used.  
 
@@ -32,9 +32,18 @@ hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 
 rockyou.txt refers to a weak password list
 
+![Image2](MD5%20crack)
+
 Hash successfully cracked by hashcat, the password is 'password123'
 
-![Image2](MD5%20crack)
+Q2: Crack SHA-1 hash
+
+The second hash is 'b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3', if we not sure the type of hash, we could use **hashid** tool to identify it:
+```bash
+hashid b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
+```
+
+![Image3](SHA-1%20)
 
 
 
