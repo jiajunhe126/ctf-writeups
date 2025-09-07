@@ -77,11 +77,11 @@ open(bytes([47,102,108,97,103,46,116,120,116]).decode()).read()
 
 ![Image 8](7.png)
 
-'[47,102,108,97,103,46,116,120,116]' is ASCII values corresponding to characters in /flag.txt.
+`[47,102,108,97,103,46,116,120,116]` is ASCII values corresponding to characters in /flag.txt.
 
-'bytes([...]).decode()' convert ASCII string to the true string.
+`bytes([...]).decode()` convert ASCII string to the true string.
 
-'open(...).read()' open the file and read its contents.
+`open(...).read()` open the file and read its contents.
 
 Execution result successfully returned flag:
 
