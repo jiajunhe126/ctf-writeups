@@ -27,7 +27,7 @@ It most likely uses Python's eval() function to process the input.
 
 Next, enter the following in the input field:
 
-```kotlin
+```bash
 open("test")
 ```
 
@@ -51,5 +51,46 @@ The error occurs solely because the file `test` does not exist;
 
 In other words, we possess the capability to directly read server files.
 
+## Step 3: Keyword Filtering Bypass Attempt
 
 After confirming that open() is available, we attempt to read the flag file directly:
+
+```bash
+open("/flag.txt").read()
+```
+
+![Image 6](5.png)
+
+However, the result returned an error:
+
+```javascript
+Error: Detected forbidden keyword '"'
+```
+
+![Image 7](6.png)
+
+This result suggests:
+
+The backend employs regular expression filtering to block string quotation marks (").
+
+Therefore, string paths cannot be directly written in the code.
+
+## Step 4: Bypass Filtering and Retrieve the Flag
+
+Since quotes are blocked, we cannot directly write the string path. Therefore, we can attempt to dynamically construct the string `/flag.txt` using an ASCII array combined with `bytes().decode()`:
+
+```bash
+open(bytes([47,102,108,97,103,46,116,120,116]).decode()).read()
+```
+
+![Image 8](7.png)
+
+'[47,102,108,97,103,46,116,120,116]' is ASCII values corresponding to characters in /flag.txt.
+
+'bytes([...]).decode()' convert ASCII string to the true string.
+
+'open(...).read()' open the file and read its contents.
+
+Execution result successfully returned flag:
+
+![Image 9](8.png)
