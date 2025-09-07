@@ -37,10 +37,6 @@ This step is to verify whether file-related functions are allowed and can be exe
 
 The program returns:
 
-```javascript
-Error: [Errno 2] No such file or directory: 'test'
-```
-
 ![Image 5](4.png)
 
 This indicates:
@@ -62,10 +58,6 @@ open("/flag.txt").read()
 ![Image 6](5.png)
 
 However, the result returned an error:
-
-```javascript
-Error: Detected forbidden keyword '"'
-```
 
 ![Image 7](6.png)
 
