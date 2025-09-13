@@ -6,4 +6,4 @@ Challenge category: Reverse Engineering
 
 Challenge points: Easy
 
-![Image 1](1.png)
+![Image 1](Description.png)
