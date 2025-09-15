@@ -1,1 +1,1 @@
-
+This project is an internal submission for the Malware Analysis (ITSC-303) course in the Information Systems Security program at SAIT. It consists of write-ups for a total of ten challenges completed on picoCTF, including four in the easy category, three in the medium category, and three in the hard category. The purpose of this project is to demonstrate applied skills in analyzing and solving CTF problems within a controlled academic environment.
