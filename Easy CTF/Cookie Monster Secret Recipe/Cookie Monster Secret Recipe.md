@@ -6,6 +6,8 @@ Challenge category: Web exploitation
 
 Challenge points: Easy
 
-![Image1](description)
+![Image1](description.png)
+
+## Step 1: Initial search
 
 
