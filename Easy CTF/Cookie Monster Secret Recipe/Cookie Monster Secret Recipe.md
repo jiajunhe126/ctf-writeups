@@ -43,10 +43,6 @@ the result reveals a cookie named secret_recipe with a long encoded value
 
 ## Step 3: Cookie decode
 
-The cookie value obtained in Step 2 was copied into a Base64 decoder.  
-
-![Image5](5.png)
-
 The cookie value obtained in Step 2 was a long string of seemingly random characters.  
 
 On closer inspection, it matched the typical pattern of **Base64 encoding**:  
@@ -57,8 +53,7 @@ On closer inspection, it matched the typical pattern of **Base64 encoding**:
 
 Because of these features, the logical next step was to apply Base64 decoding.
 
-After decoding, the hidden flag was revealed:
-
+![Image5](5.png)
 
 After decoding, the hidden flag was revealed:
 
