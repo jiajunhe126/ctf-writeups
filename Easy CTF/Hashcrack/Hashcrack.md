@@ -103,6 +103,6 @@ After correctly cracking these three hashes, finally get the flag.
 
 ![Image7](solution)
 
-**Final Flag:** `picoCTF{UseStr0nG_h@shEs_f0r_Passw0rds!_eb2f8459}`
+
 
 
