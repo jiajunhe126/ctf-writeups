@@ -101,7 +101,7 @@ The password is 'qwerty098'
 
 After correctly cracking these three hashes, finally get the flag.
 
-![Image7](solution)
+![Image7](solution.png)
 
 
 
