@@ -55,6 +55,4 @@ Because of these features, the logical next step was to apply Base64 decoding.
 
 ![Image5](5.png)
 
-After decoding, the hidden flag was revealed:
-
-picoCTF{c00k1e_m0nster_l0ves_c00kies_4736F6CB}
+After decoding, the hidden flag was revealed.
