@@ -48,9 +48,9 @@ Therefore, the next step is to decode it using Base64 to attempt to restore the 
 
 ![Image5](3.png)
 
-This output proves our guess was correct, and we finally get the flag using the base64 command.
+This output proves our guess was correct, and we finally get the flag using the `base64` command.
 
-Here, the option -n in echo prevents it from appending a newline character, and -d in base64 tells the command to decode the input instead of encoding it.
+Here, the option `-n` in echo prevents it from appending a newline character, and `-d` in base64 tells the command to decode the input instead of encoding it.
 
 
 
