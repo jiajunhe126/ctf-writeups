@@ -28,7 +28,7 @@ To exploit the time gap between the program’s check (e.g., checking file owner
 
 ![Image4](3.png)
 
-![Image5](3.1.png)
+![Image5](4.png)
 
 Why we need this script?
 
@@ -40,7 +40,7 @@ Since the race condition depends on extremely precise timing, running the progra
 
 Run txtreader on victim.txt repeatedly in a loop, and capture its output. If the output contains the flag pattern, stop the loop and extract the flag:
 
-![Image6](4.png)
+![Image6](5.png)
 
 
 
