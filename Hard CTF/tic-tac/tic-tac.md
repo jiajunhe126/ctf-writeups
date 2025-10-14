@@ -28,11 +28,23 @@ To exploit the time gap between the program’s check (e.g., checking file owner
 
 ![Image4](3.png)
 
-![Image5](4.png)
-
 Why we need this script?
 
 Because we don’t know exactly when the program performs the check and the open, we have to keep switching back and forth — hoping that the symlink points to owned.txt during the check and to flag.txt during the actual open.
+
+![Image5](4.1.png)
+
+Command explanation:
+
+This command runs the toggling script in the background.
+
+`nohup` ensures that the process keeps running even if the terminal is closed.
+
+`python3 /tmp/toggle.py` executes the Python script responsible for rapidly switching the symlink.
+
+`>/dev/null 2>&1` discards both standard output and standard error, so the script runs silently.
+
+`&` runs the command in the background, allowing us to continue using the terminal for other commands.
 
 ## Step 4: Run the target program in a loop to trigger the race
 
@@ -42,5 +54,21 @@ Run txtreader on victim.txt repeatedly in a loop, and capture its output. If the
 
 ![Image6](5.png)
 
+Code explanation:
 
+```python
+./txtreader victim.txt 2>/dev/null | tee out.txt
+```
+This runs the vulnerable program with victim.txt as input. Any error messages are suppressed (2>/dev/null), and the standard output is saved to a file named out.txt while still being displayed on the screen using tee.
 
+```python
+if grep -E -i 'picoCTF\{' out.txt >/dev/null;
+```
+This checks whether the output file contains a line with the string picoCTF{, ignoring case. If found, it indicates that the program has successfully printed the flag.
+
+```python
+grep -Eo 'picoCTF\{[^}]+\}' out.txt
+```
+This extracts the full flag from the output using a regular expression that matches the picoCTF{...} pattern.
+
+And finally we successfully extract flag with two python script.
