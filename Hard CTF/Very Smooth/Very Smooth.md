@@ -6,5 +6,5 @@
 
 **Challenge points**: Hard
 
-![Image1](description.png)
+![Image1](description)
 
