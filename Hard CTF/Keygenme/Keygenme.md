@@ -88,7 +88,7 @@ To extract the values, we use:
 
 ```bash
 si           
-x/p $rax    
+p/x $rax    
 ```
 
 This reveals the hex representation of each character being checked.
